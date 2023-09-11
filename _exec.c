@@ -6,19 +6,19 @@
  */
 int exec(data_of_program *data)
 {
-	int return_value = 0, status;
+	int l_value = 0, status;
 	pid_t pid;
 
 	/* check for program in built ins */
-	return_value = builtins_list(data);
-	if (return_value != -1)/* if program was found in built ins */
-		return (return_value);
+	l_value = builtins_list(data);
+	if (l_value != -1)/* if program was found in built ins */
+		return (l_value);
 
 	/* check for program file system */
-	return_value = find_prog(data);
-	if (return_value)
+	l_value = find_prog(data);
+	if (l_value)
 	{/* if program not found */
-		return (return_value);
+		return (l_value);
 	}
 	else
 	{/* if program was found */
@@ -30,8 +30,8 @@ int exec(data_of_program *data)
 		}
 		if (pid == 0)
 		{/* I am the child process, I exec the program*/
-			return_value = execve(data->tokens[0], data->tokens, data->env);
-			if (return_value == -1) /* if error when execve*/
+			l_value = execve(data->tokens[0], data->tokens, data->env);
+			if (l_value == -1) /* if error when execve*/
 				perror(data->command_name), exit(EXIT_FAILURE);
 		}
 		else

@@ -8,7 +8,7 @@
  **/
 int builtins_list(data_of_program *data)
 {
-	int opt_iterators;
+	int counter;
 	builtins customs[] = {
 		{"exit", builtin_exit},
 		{"help", builtin_help},
@@ -21,13 +21,13 @@ int builtins_list(data_of_program *data)
 	};
 
 /*walk through the structure*/
-	for (opt_iterators = 0; customs[opt_iterators].builtin != NULL; opt_iterators++)
+	for (counter = 0; customs[counter].builtin != NULL; counter++)
 	{
 /*if there is a match between the given command and a builtin,*/
-		if (_strcmp(customs[opt_iterators].builtin, data->command_name, 0))
+		if (_strcmp(customs[counter].builtin, data->command_name, 0))
 		{
 /*execute the function, and return the return value of the function*/
-			return (customs[opt_iterators].function(data));
+			return (customs[counter].function(data));
 		}
 /*if there is no match return -1 */
 	}

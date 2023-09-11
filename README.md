@@ -45,3 +45,6 @@ SHELL PROJECT
 -   `wait3` (man 2 wait3)
 -   `wait4` (man 2 wait4)
 -   `write` (man 2 write)
+
+<h3 align="left">If you found this helpful, Support meh! :) :</h3>
+<p><a href="https://www.buymeacoffee.com/priest099"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="priest099" /></a><a href="https://ko-fi.com/priest099"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="priest099" /></a></p><br><br>
